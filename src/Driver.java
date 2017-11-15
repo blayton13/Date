@@ -34,8 +34,8 @@ public class Driver
         int option = 0;
         int choice;
         int numDays;
-        System.out.println("\nEnter one of the following:\n1 to change Date 1\n2 to change Date 2\n3 to compare dates\n4 to calculate days in between\n5 to check if equal\n6 to add days\n7 to subtract days\n8 to print dates\n9 for Julian date");
-        while(option<10){
+        do{
+            System.out.println("\nEnter one of the following:\n1 to change Date 1\n2 to change Date 2\n3 to compare dates\n4 to calculate days in between\n5 to check if equal\n6 to add days\n7 to subtract days\n8 to print dates\n9 for Julian date\n10 to exit");
             option=console.nextInt();
             console.nextLine();
             switch(option){
@@ -125,38 +125,8 @@ public class Driver
             }
             System.out.println("\nPress enter to continue");
             console.nextLine();
-            System.out.println("Enter one of the following:\n1 to change Date 1\n2 to change Date 2\n3 to compare dates\n4 to calculate days in between\n5 to check if equal\n6 to add days\n7 to subtract days\n8 to print dates\n9 for Julian date");
-        }
+        }while(option<10);
             
-        
-        
-        /*
-        Date date1 = new Date(12,1,1998);
-        Date date2 = new Date(1,28,1997);
-        System.out.println("Date 1 is: " + date1.getDate("long"));
-        System.out.println("Date 2 is: " + date2.getDate("long"));
-        
-        if(date1.compareTo(date2)>0)
-            System.out.println("Date 1 is greater than Date 2");
-        else if(date1.compareTo(date2)<0)
-            System.out.println("Date 2 is greater than Date 1");
-        else
-            System.out.println("Date 1 is equal to Date 2");
-            
-        System.out.println("Days in between Date 1 and Date 2 is: " + date1.daysInBetween(date2));
-        
-        System.out.println("Adding 400 days to Date 1.");
-        date1.add(400);
-        System.out.println("Date 1: " + date1);
-        
-        if(date1.compareTo(date2)>0)
-            System.out.println("Date 1 is greater than Date 2");
-        else if(date1.compareTo(date2)<0)
-            System.out.println("Date 2 is greater than Date 1");
-        else
-            System.out.println("Date 1 is equal to Date 2");
-            
-        System.out.println("Days in between Date 1 and Date 2 is: " + date1.daysInBetween(date2));
-        */
+        System.out.println("Exiting program");
     }
 }
