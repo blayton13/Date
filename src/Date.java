@@ -316,6 +316,10 @@ public class Date
         return month+"/"+day+"/"+year;
     }
 
+    /**
+     * Returns the Julian form of the Date, depending on day, month, and year.
+     * @return Julian date in integer form
+     */
     public int getJulianDate(){
         return ((1461*(this.year + 4800 + (this.month-14)/12))/4 +(367*(this.month-2-12*((this.month-14)/12)))/12-(3*((this.year + 4900 + (this.month-14)/12)/100))/4 + this.day-32075);
     }
